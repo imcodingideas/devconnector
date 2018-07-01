@@ -54,6 +54,50 @@
 				"description": "Registers a New User"
 			},
 			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/users/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "joseph@michael-chambers.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "asdfasdf",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				},
+				"description": "Logs in a user"
+			},
+			"response": []
 		}
 	],
 	"event": [

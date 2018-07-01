@@ -14,7 +14,9 @@ router.get('/test', (req, res) => res.json({ msg: 'Users Works' }))
 // @desc    Register users
 // @access  Public
 router.post('/register', (req, res) => {
-  User.findOne({ email: req.body.email }).then(user => {
+  const { email, name, password } = req.body
+
+  User.findOne({ email }).then(user => {
     if (user) {
       return res.status(400).json({ email: 'Email already exists' })
     }
@@ -25,10 +27,10 @@ router.post('/register', (req, res) => {
     })
 
     const newUser = new User({
-      name: req.body.name,
-      email: req.body.email,
+      name,
+      email,
       avatar,
-      password: req.body.password,
+      password,
     })
 
     bcrypt.genSalt(10, (err, salt) => {
@@ -40,6 +42,27 @@ router.post('/register', (req, res) => {
           .then(user => res.json(user))
           .catch(err => console.log(err))
       })
+    })
+  })
+})
+
+// @route   GET api/users/login
+// @desc    Login user / Returning JTW
+// @access  Public
+router.post('/login', (req, res) => {
+  const { email, password } = req.body
+
+  User.findOne({ email }).then(user => {
+    if (!user) {
+      return res.status(404).json({ email: 'User not found' })
+    }
+
+    bcrypt.compare(password, user.password).then(isMatch => {
+      if (isMatch) {
+        res.json({ msg: 'Success' })
+      } else {
+        return res.status(400).json({ password: 'Password incorrect' })
+      }
     })
   })
 })
