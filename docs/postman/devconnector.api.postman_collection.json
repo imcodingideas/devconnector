@@ -98,6 +98,34 @@
 				"description": "Logs in a user"
 			},
 			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/users/current",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMzk0YWRkOGI3MGQ1MDYwMDk4ZGMwYiIsIm5hbWUiOiJKb3NlcGggQ2hhbWJlcnMiLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyLzBhMDdkZjA3OWZkN2EwN2U0Y2QwZTU2Njg4MzUyOTZjP3M9MjAwJnI9cGcmZD1tbSIsImlhdCI6MTUzMDQ4NDc1OSwiZXhwIjoxNTMwNDg4MzU5fQ.2W_obmdkI-w34XsmZzBVRjJGAtaNrN_Duz16u4J0HZU"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/api/users/current",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"current"
+					]
+				},
+				"description": "Gets current user"
+			},
+			"response": []
 		}
 	],
 	"event": [
