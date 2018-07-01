@@ -35,6 +35,12 @@
 							"value": "asdfasdf",
 							"description": "",
 							"type": "text"
+						},
+						{
+							"key": "password2",
+							"value": "asdfasdf",
+							"description": "",
+							"type": "text"
 						}
 					]
 				},
