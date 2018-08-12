@@ -160,85 +160,6 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/api/profile",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMzk0YWRkOGI3MGQ1MDYwMDk4ZGMwYiIsIm5hbWUiOiJKb3NlcGggQ2hhbWJlcnMiLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyLzBhMDdkZjA3OWZkN2EwN2U0Y2QwZTU2Njg4MzUyOTZjP3M9MjAwJnI9cGcmZD1tbSIsImlhdCI6MTUzNDAzODE2NywiZXhwIjoxNTM0MDQxNzY3fQ.ulach_oxelhXpTxRUI_KGqTRY9ilAyG7RLBHQPYi6oA",
-						"disabled": true
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/x-www-form-urlencoded"
-					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "handle",
-							"value": "imcodingideas",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "status",
-							"value": "Developer",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "skills",
-							"value": "HTML,CSS,JavaScript",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "company",
-							"value": "NearSoft",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "website",
-							"value": "http://nearsoft.com",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "twitter",
-							"value": "http://twitter.com/imcodingideas",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "facebook",
-							"value": "http://facebook.com/imcodingideas",
-							"description": "",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "http://localhost:5000/api/profile/handle/imcodingideas",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"profile",
-						"handle",
-						"imcodingideas"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "http://localhost:5000/api/profile/handle/imcodingideas",
 			"request": {
 				"method": "GET",
@@ -393,6 +314,120 @@
 					]
 				},
 				"description": "Lists all user profiles"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/profile/experience",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMzk0YWRkOGI3MGQ1MDYwMDk4ZGMwYiIsIm5hbWUiOiJKb3NlcGggQ2hhbWJlcnMiLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyLzBhMDdkZjA3OWZkN2EwN2U0Y2QwZTU2Njg4MzUyOTZjP3M9MjAwJnI9cGcmZD1tbSIsImlhdCI6MTUzNDEwMDY2MiwiZXhwIjoxNTM0MTA0MjYyfQ.D0Svj5BtIu_VZ9CBN23bGf2SfS0oe6xc-_bOnzrooo0"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Sr Developer",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "company",
+							"value": "self",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "from",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/experience",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"experience"
+					]
+				},
+				"description": "Adds experience to profile"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/profile/education",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMzk0YWRkOGI3MGQ1MDYwMDk4ZGMwYiIsIm5hbWUiOiJKb3NlcGggQ2hhbWJlcnMiLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyLzBhMDdkZjA3OWZkN2EwN2U0Y2QwZTU2Njg4MzUyOTZjP3M9MjAwJnI9cGcmZD1tbSIsImlhdCI6MTUzNDEwMDY2MiwiZXhwIjoxNTM0MTA0MjYyfQ.D0Svj5BtIu_VZ9CBN23bGf2SfS0oe6xc-_bOnzrooo0"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "school",
+							"value": "Free Code Camp",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "degree",
+							"value": "Front end Developer",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "from",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "fieldOfStudy",
+							"value": "NA",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/education",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"education"
+					]
+				},
+				"description": "Adds Education to Profile"
 			},
 			"response": []
 		}
