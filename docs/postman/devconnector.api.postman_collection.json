@@ -112,12 +112,12 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMzk0YWRkOGI3MGQ1MDYwMDk4ZGMwYiIsIm5hbWUiOiJKb3NlcGggQ2hhbWJlcnMiLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyLzBhMDdkZjA3OWZkN2EwN2U0Y2QwZTU2Njg4MzUyOTZjP3M9MjAwJnI9cGcmZD1tbSIsImlhdCI6MTUzMDQ4NDc1OSwiZXhwIjoxNTMwNDg4MzU5fQ.2W_obmdkI-w34XsmZzBVRjJGAtaNrN_Duz16u4J0HZU"
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMzk0YWRkOGI3MGQ1MDYwMDk4ZGMwYiIsIm5hbWUiOiJKb3NlcGggQ2hhbWJlcnMiLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyLzBhMDdkZjA3OWZkN2EwN2U0Y2QwZTU2Njg4MzUyOTZjP3M9MjAwJnI9cGcmZD1tbSIsImlhdCI6MTUzNDAzNDQ3OSwiZXhwIjoxNTM0MDM4MDc5fQ.fW7lO6_BaHHJW-9s81vxbrUqEoZepiUgbeK2nHXY_ro"
 					}
 				],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:5000/api/users/current",
+					"raw": "http://localhost:5000/api/profile",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -125,11 +125,113 @@
 					"port": "5000",
 					"path": [
 						"api",
-						"users",
-						"current"
+						"profile"
 					]
 				},
 				"description": "Gets current user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMzk0YWRkOGI3MGQ1MDYwMDk4ZGMwYiIsIm5hbWUiOiJKb3NlcGggQ2hhbWJlcnMiLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyLzBhMDdkZjA3OWZkN2EwN2U0Y2QwZTU2Njg4MzUyOTZjP3M9MjAwJnI9cGcmZD1tbSIsImlhdCI6MTUzNDAzNDQ3OSwiZXhwIjoxNTM0MDM4MDc5fQ.fW7lO6_BaHHJW-9s81vxbrUqEoZepiUgbeK2nHXY_ro"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				},
+				"description": "Get current users profile"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMzk0YWRkOGI3MGQ1MDYwMDk4ZGMwYiIsIm5hbWUiOiJKb3NlcGggQ2hhbWJlcnMiLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyLzBhMDdkZjA3OWZkN2EwN2U0Y2QwZTU2Njg4MzUyOTZjP3M9MjAwJnI9cGcmZD1tbSIsImlhdCI6MTUzNDAzNDQ3OSwiZXhwIjoxNTM0MDM4MDc5fQ.fW7lO6_BaHHJW-9s81vxbrUqEoZepiUgbeK2nHXY_ro"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "handle",
+							"value": "imcodingideas",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "Developer",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "skills",
+							"value": "HTML,CSS,JavaScript",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "company",
+							"value": "NearSoft",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "website",
+							"value": "http://nearsoft.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "twitter",
+							"value": "http://twitter.com/imcodingideas",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "facebook",
+							"value": "http://facebook.com/imcodingideas",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
 			},
 			"response": []
 		}
